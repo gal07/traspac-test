@@ -35,7 +35,12 @@
 
     <div class="wrapper">
         @include('layouts.mpdnav')
-        {{ $slot }}
+        <div class="main-panel">
+            @include('layouts.mpdnavbar')
+            {{ $slot }}
+            @include('layouts.mpdfooter')
+        </div>
+
     </div>
 
 </body>
