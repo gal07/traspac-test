@@ -21,7 +21,7 @@
             "ajax":
             {
                 "headers": {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                "url": url+'/datatable_employee?filter=NQ==',
+                "url": url+'/datatable_employee?filter=all',
                 "type": "POST",
             },
             stateSave:true,

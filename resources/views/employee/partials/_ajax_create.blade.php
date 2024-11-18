@@ -19,6 +19,8 @@
                 if (resp.success === true) {
                     document.getElementById("formcreateemployee").reset();
                     $('#myModal').modal('toggle');
+                    var table = $('#datatables').DataTable();
+                    table.ajax.reload( null, false );
                     demo.showNotification('success','bottom','right',resp.message)
                 }else{
 
