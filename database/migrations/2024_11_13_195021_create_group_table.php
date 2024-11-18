@@ -15,9 +15,9 @@ return new class extends Migration
             $table->integer('id')->autoIncrement();
             $table->string('name');
             $table->integer('status')->default(1);
-            $table->integer('created_at');
-            $table->integer('updated_at');
-            $table->integer('deleted_at');
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamp('deleted_at')->useCurrent();
             $table->integer('is_delete')->default(0);
         });
     }

@@ -16,11 +16,11 @@ return new class extends Migration
 
         // Eselon Data
         $ares = array(
-            ['name'=>'ESELON I','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'ESELON II','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'ESELON III','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'ESELON IV','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'ESELON V','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
+            ['name'=>'ESELON I'],
+            ['name'=>'ESELON II'],
+            ['name'=>'ESELON III'],
+            ['name'=>'ESELON IV'],
+            ['name'=>'ESELON V'],
             
         );
 
@@ -48,7 +48,7 @@ return new class extends Migration
 
         foreach ($formation as $value) {
             DB::table('formation')->insert([
-                ['group_id'=>$es_dump[$value["eselon"]]["id"],'name'=>$value["name"],'created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
+                ['group_id'=>$es_dump[$value["eselon"]]["id"],'name'=>$value["name"]],
             ]);
         }
         

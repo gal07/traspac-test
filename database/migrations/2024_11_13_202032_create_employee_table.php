@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('employee', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
-            $table->integer('nip'); 
+            $table->bigInteger('nip'); 
             $table->string('religion'); 
             $table->string('name'); 
             $table->date('born_date');
@@ -33,9 +33,9 @@ return new class extends Migration
             $table->string('phone_number');
             $table->string('tax_number');
             $table->integer('status')->default(1);
-            $table->integer('created_at');
-            $table->integer('updated_at');
-            $table->integer('deleted_at');
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamp('deleted_at')->useCurrent();
             $table->integer('is_delete')->default(0);
         });
     }

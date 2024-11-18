@@ -13,12 +13,12 @@ return new class extends Migration
     public function up(): void
     {
         DB::table('placed_job')->insert([
-            ['name'=>'Jakarta','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Bandung','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Medan','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Solo','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Yogyakarta','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Malang','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
+            ['name'=>'Jakarta'],
+            ['name'=>'Bandung'],
+            ['name'=>'Medan'],
+            ['name'=>'Solo'],
+            ['name'=>'Yogyakarta'],
+            ['name'=>'Malang'],
         ]);
     }
 

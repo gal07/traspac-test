@@ -10,6 +10,7 @@
             EAP
         </a>
     </div>
+
     <div class="sidebar-wrapper">
         <div class="user">
             <div class="photo">
@@ -50,41 +51,19 @@
             <li>
                 <a data-toggle="collapse" href="#pagesExamples">
                     <i class="material-icons">image</i>
-                    <p>Pages
+                    <p>Manage
                         <b class="caret"></b>
                     </p>
                 </a>
                 <div class="collapse" id="pagesExamples">
                     <ul class="nav">
                         <li>
-                            <a href="pages/pricing.html">Pricing</a>
-                            <div class="collapse" id="pagesExamples">
-                                <ul class="nav">
-                                    <li>
-                                        <a href="pages/timeline.html">Timeline</a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </li>
-                        <li>
-                            <a href="pages/timeline.html">Timeline</a>
-                        </li>
-                        <li>
-                            <a href="pages/login.html">Login Page</a>
-                        </li>
-                        <li>
-                            <a href="pages/register.html">Register Page</a>
-                        </li>
-                        <li>
-                            <a href="pages/lock.html">Lock Screen Page</a>
-                        </li>
-                        <li>
-                            <a href="pages/user.html">User Profile</a>
+                            <a href="{{ route('employee') }}">Manage Employee</a>
                         </li>
                     </ul>
                 </div>
             </li>
         </ul>
     </div>
+
 </div>

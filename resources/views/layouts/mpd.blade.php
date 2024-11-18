@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" href="{{ asset('mpd/') }}assets/img/favicon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Employee App | Dashboard</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
     <!-- Canonical SEO -->
@@ -96,6 +97,10 @@
         }, 700)
     });
 </script>
+
+<x-mpd.js></x-mpd.js>
+<x-mpd.ajax></x-mpd.ajax>
+
 
 
 <!-- Mirrored from demos.creative-tim.com/material-dashboard-pro/examples/pages/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2017 21:32:19 GMT -->

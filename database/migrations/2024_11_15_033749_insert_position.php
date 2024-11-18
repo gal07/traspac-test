@@ -13,20 +13,20 @@ return new class extends Migration
     public function up(): void
     {
         DB::table('position')->insert([
-            ['name'=>'Kepala Sekretariat Utama','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Penyusun laporan keuangan','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Surveyor Pemetaan Pertama','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Analis Data Survei dan Pemetaan','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Perancang Per-UUan Utama IV/e','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Kepala Biro Perencanaan,Kepegawaian dan hukum','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Widyaiswara Utama IV/e','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Analis Kepegawaian Madya IV/b','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Kepala Sub Bidang Kerjasama dan Pelayanan Riset,DKP','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Analis Hukum','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Peneliti Pertama III/b','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Surveyor Pemetaan Muda','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Analis Jabatan','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
-            ['name'=>'Kepala Subbag Kepegawaian','created_at'=>time(),'updated_at'=>time(),'deleted_at'=>time()],
+            ['name'=>'Kepala Sekretariat Utama'],
+            ['name'=>'Penyusun laporan keuangan'],
+            ['name'=>'Surveyor Pemetaan Pertama'],
+            ['name'=>'Analis Data Survei dan Pemetaan'],
+            ['name'=>'Perancang Per-UUan Utama IV/e'],
+            ['name'=>'Kepala Biro Perencanaan,Kepegawaian dan hukum'],
+            ['name'=>'Widyaiswara Utama IV/e'],
+            ['name'=>'Analis Kepegawaian Madya IV/b'],
+            ['name'=>'Kepala Sub Bidang Kerjasama dan Pelayanan Riset,DKP'],
+            ['name'=>'Analis Hukum'],
+            ['name'=>'Peneliti Pertama III/b'],
+            ['name'=>'Surveyor Pemetaan Muda'],
+            ['name'=>'Analis Jabatan'],
+            ['name'=>'Kepala Subbag Kepegawaian'],
         ]);
     }
 

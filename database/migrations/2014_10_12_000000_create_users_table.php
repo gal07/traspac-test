@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
@@ -20,6 +21,11 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        DB::table('users')->insert([
+            ['name'=>'Admin Traspac','email'=>'admin@admin.com','password'=>'$2y$12$XZoruM/HmkFHI5ttWXQxredUi1Yc5Z2kFwvUfHmHvATrUZ0154lPe']
+        ]);
+
     }
 
     /**
