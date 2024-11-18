@@ -18,7 +18,7 @@
                         <h4 class="card-title">Manage Employee</h4>
                         <div class="toolbar">
                             <button data-toggle="modal" data-target="#myModal" class="btn btn-primary">Add Employee</button>
-                            <button class="btn btn-primary">Print</button>
+                            <a target="_blank" href="{{ route('employee.print') }}" class="btn btn-primary">Print</a>
                             <button data-toggle="modal" data-target="#FilterModal" class="btn btn-primary">Filter</button>
                         </div>
                         

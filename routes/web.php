@@ -25,6 +25,7 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/employee', [EmployeeController::class, 'index'])->name('employee');
+    Route::get('/employee/print', [EmployeeController::class, 'print'])->name('employee.print');
     Route::post('/employee', [EmployeeController::class, 'store'])->name('employee.create');
     Route::post('/datatable_employee', [EmployeeController::class, 'datatable'])->name('datatable_employee');
     Route::patch('/employee', [EmployeeController::class, 'update'])->name('employee.update');

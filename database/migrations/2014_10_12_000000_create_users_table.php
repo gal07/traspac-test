@@ -23,7 +23,7 @@ return new class extends Migration
         });
 
         DB::table('users')->insert([
-            ['name'=>'Admin Traspac','email'=>'admin@admin.com','password'=>'$2y$12$XZoruM/HmkFHI5ttWXQxredUi1Yc5Z2kFwvUfHmHvATrUZ0154lPe']
+            ['name'=>'Admin Traspac','email'=>'admin@admin.com','password'=>'$2y$12$V71AWEpejDFWFOkmztycO.q2ZWnMmoS.VsP5qJqGBoVcTU2lGPDFG']
         ]);
 
     }

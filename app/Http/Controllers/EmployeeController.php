@@ -7,6 +7,7 @@ use Illuminate\View\View;
 use App\Models\Employees;
 use App\Thirdparty\SSP;
 use Illuminate\Support\Facades\DB;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class EmployeeController extends Controller
 {
@@ -210,6 +211,39 @@ class EmployeeController extends Controller
         
         return response()->json(["data"=>$result,'filter'=>base64_decode($filter),'message'=>'Data berhasil update']);
                 
+    }
+
+
+    public function print() {
+        $data["employee"] = DB::table('employee')
+        ->join('group', 'employee.group', '=', 'group.id')
+        ->join('formation', 'employee.formation', '=', 'formation.id')
+        ->join('position', 'employee.position', '=', 'position.id')
+        ->join('placed_job', 'employee.placed_job', '=', 'placed_job.id')
+        ->join('work_unit', 'employee.work_unit', '=', 'work_unit.id')
+        ->select(
+        'employee.id as id',
+        'employee.nip as nip',
+        'employee.name as name',
+        'employee.born_place as born_place',
+        'employee.address as address',
+        'employee.born_date as born_date',
+        'employee.gender as gender',
+        'formation.name as formation',
+        'group.name as group',
+        'position.name as position',
+        'placed_job.name as placed_job',
+        'employee.religion as religion',
+        'work_unit.name as work_unit',
+        'employee.tax_number as tax_number',
+        'employee.phone_number as phone_number',
+        )
+        ->where('employee.is_delete',0)
+        ->get();
+     
+        $pdf = Pdf::loadView('pdf', $data);
+     
+        return $pdf->stream();
     }
 
 }
